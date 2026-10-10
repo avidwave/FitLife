@@ -8,25 +8,21 @@ ML_IN_L = 1000
 def getting_info():
     """Сбор данных пользователя"""
     user_name = input('Как вас зовут? ')
-    user_name = user_name.title()
-    user_age = int(input('Сколько вам лет? '))
-    user_weight = float(input('Сколько вы весите (в кг)? '))
-    user_height = float(input('Каков ваш рост (в метрах, например, 1.75)? '))
-    return user_name, user_age, user_weight, user_height
+    return user_name.title(), int(input('Сколько вам лет? ')), \
+        float(input('Сколько вы весите (в кг)? ')), \
+        float(input('Каков ваш рост (в метрах, например, 1.75)? '))
 
 
 def calculate_bmi(user_weight, user_height):
     """Расчет ИМТ/bmi"""
     bmi = user_weight / (user_height ** 2)
-    bmi = round(bmi, 1)
-    return bmi
+    return round(bmi, 1)
 
 
 def calculate_water_recommendation(user_weight):
     """Расчет нормы воды"""
     water_ml = user_weight * WATER_PER_KG
-    water_l = water_ml / ML_IN_L
-    return water_l
+    return water_ml / ML_IN_L
 
 
 def program():
