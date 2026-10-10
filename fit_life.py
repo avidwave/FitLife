@@ -40,4 +40,7 @@ def program():
     print(f'Твой индекс массы тела: {bmi}')
     water_l = calculate_water_recommendation(user_weight)
     print(f'Рекомендуемая норма воды: {water_l} л. в день')
-    print('Расчет окончен. Будьте здоровы!')
+    print('Расчет окончен. Будь здоров!')
+
+
+program()
